@@ -1,13 +1,22 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169520192-2"></script>
 <script>
+  function wait(timeout) {
+    return new Promise(resolve => {
+        setTimeout(resolve, timeout);
+    });
+  }
+  
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-169520192-2');
-</script>
-
-<script>
+  
+  await wait(2000);
+  if (newState == -1) {
+      alert('Done');
+  }
+  
   window.location='https://discord.gg/XfH6W8M'
 </script>
